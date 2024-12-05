@@ -1,2 +1,2 @@
-import { addGrid } from "./grid";
+import { addGrid } from './grid';
 addGrid();

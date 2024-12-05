@@ -11,6 +11,5 @@ export default {
       ...globals.node,
     },
   },
-
-  ignores: ["**/node_modules/**", "**/yarn.lock"],
+  files: ["js/*.js"],
 };
