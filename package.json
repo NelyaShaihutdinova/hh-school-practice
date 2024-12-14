@@ -8,9 +8,9 @@
   "scripts": {
     "dev": "parcel *.html",
     "build": "parcel build *.html --public-url './'",
-    "format": "prettier --write js",
-    "lint": "eslint js",
-    "postinstall": "cp tools/pre-commit* .git/hooks || true",
+    "format": "bash tools/format.sh",
+    "lint": "bash tools/lint.sh",
+    "postinstall": "cp tools/githooks/* .git/hooks || true",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "devDependencies": {
