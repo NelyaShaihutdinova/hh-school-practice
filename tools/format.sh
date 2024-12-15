@@ -1,2 +1,2 @@
 #!/bin/bash
-yarn prettier --ignore-unknown --write "${1:-.}"
+yarn prettier --ignore-unknown --write "${@:-.}"

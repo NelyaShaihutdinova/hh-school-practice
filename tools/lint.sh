@@ -1,2 +1,2 @@
 #!/bin/bash
-yarn eslint "${1:-.}"
+yarn eslint "${@:-.}"
