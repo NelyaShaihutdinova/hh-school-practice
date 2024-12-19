@@ -1,0 +1,105 @@
+.footer {
+    width: 100%;
+    background-color: #212122;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.social_icons {
+    width: 205px;
+    height: 36px;
+    margin-bottom: 30px
+}
+
+.footer_buttons {
+    border-bottom: 1px solid #666666;
+}
+
+.footer_social_icon__button {
+    height: 36px;
+    width: 36px;
+    border: 0;
+    margin-right: 15px;
+    font-size: 0;
+}
+
+.footer_social_icon__button:last-of-type {
+    margin-right: 0;
+}
+
+.market_icons {
+    padding-bottom: 30px;
+}
+
+@social_items: facebook, twitter, vk, instagram;
+
+each(@social_items, {
+    .footer_social_icon__button_@{value} {
+        background: url('/assets/@{value}.svg');
+    }
+})
+
+@market_items: app_store, google_play;
+
+each(@market_items, {
+    .footer__button_@{value} {
+        background: url('/assets/@{value}.svg');
+    }
+})
+
+.footer__button:last-of-type {
+    margin-right: 0;
+}
+
+.footer__button {
+    height: 40px;
+    width: 140px;
+    border: 0;
+    margin-right: 3px;
+    font-size: 0;;
+}
+
+.footer_icon_desktop {
+    display: none;
+}
+
+.footer_icon {
+    width: 46px;
+    height: 46px;
+}
+
+.right {
+    color: #999999;
+    line-height: 25px;
+    margin-top: 15px;
+    width: 250px;
+    height: 95px;
+}
+
+@media @gt-mobile {
+    .footer_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .market_icons {
+        justify-content: space-between;
+    }
+    .right {
+        width: 580px;
+    }
+}
+
+@media @gt-tablet {
+    .footer_buttons {
+        justify-content: flex-start;
+
+    }
+    .footer_icon_desktop {
+        display: block;
+        margin-left: 235px;
+    }
+    .market_icons {
+        margin-left: 100px;
+    }
+}
+
