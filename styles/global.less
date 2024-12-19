@@ -1,9 +1,16 @@
-@min-width: 768px;
-@gt-m: ~'(min-width: @{min-width})';
+@min-tablet: 768px;
+@min-desktop: 930px;
+
+@gt-mobile: ~'(min-width: @{min-tablet})';
+@gt-tablet: ~'(min-width: @{min-desktop})';
 
 :root {
     --min-width: 768px;
     --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -14,6 +21,9 @@ body {
 .container {
     padding: 0 16px;
     box-sizing: border-box;
+    max-width: 930px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 @font-face {
@@ -30,7 +40,13 @@ h1, h2, h3, h4 {
 h2 {
     font-size: 20px;
     line-height: 1.2;
+
+    @media @gt-mobile {
+        font-size: 30px;
+        line-height: 37px;
+    }
 }
+
 
 h4 {
     font-size: 16px;

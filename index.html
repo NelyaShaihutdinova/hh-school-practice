@@ -7,18 +7,45 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/styles.less" />
+        <link rel="stylesheet" href="./styles/styles.less" >
     </head>
     <body>
         <!-- Начнем отсюда -->
-        <header class="header container">
-           <a href="/">
-             <img src="/assets/hh.svg" alt="">
-           </a>
-           <div>
-                <button class="header__button header__button_search">Поиск</button>
-                <button class="header__button header__button_profile">Профиль</button>
-                <button class="header__button header__button_menu">Меню</button>
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <a href="/">
+                        <img src="/assets/hh.svg" alt="">
+                    </a>
+                    <!-- Выбор меню отображения сделан через медио-выражение для классов  menu-desktop/menu-desktop-buttons/ menu-mobile-->
+
+                    <!-- Меню, которое отображаем на десктопе и планшете -->
+                    <nav class="menu-desktop">
+                        <a href="" class="menu-desktop-link">
+                            Одежда
+                        </a>
+                        <a href="" class="menu-desktop-link">
+                            Сумки
+                        </a>
+                        <a href="" class="menu-desktop-link">
+                            Аксессуары
+                        </a>
+                        <a href="" class="menu-desktop-link">
+                            Офисные принадлежности
+                        </a>
+                    </nav>
+                    <div class="menu-desktop-buttons">
+                        <button class="button-search"></button>
+                        <button class="button-sigin">Войти</button>
+                    </div>
+
+                    <!-- Меню, которое отображаем на мобильном устройстве -->
+                    <nav class="menu-mobile">
+                        <button class="header__button header__button_search">Поиск</button>
+                        <button class="header__button header__button_profile">Профиль</button>
+                        <button class="header__button header__button_menu">Меню</button>
+                    </nav>
+                 </div>
             </div>
         </header>
 
@@ -30,25 +57,78 @@
                 <div class="card">
                     <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
                     <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 Р</div>
+                    <div class="card__price">1 990 ₽</div>
                 </div>
                 <div class="card">
+                    <div class="card__sale"></div>
                     <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
                     <h4 class="card__name">Сумка</h4>
-                    <div class="card__price">1 990 Р</div>
+                    <div class="card__price">
+                        <span class="card__price-old">1 990</span>
+                        1 000 ₽
+                    </div>
                 </div>
                 <div class="card">
                     <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
                     <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 Р</div>
+                    <div class="card__price">1 990 ₽</div>
                 </div>
                 <div class="card">
                     <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
                     <h4 class="card__name">Сумка</h4>
-                    <div class="card__price">1 990 Р</div>
+                    <div class="card__price">1 990 ₽</div>
+                </div>
+                <div class="card">
+                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                    <h4 class="card__name">Зонт</h4>
+                    <div class="card__price">1 990 ₽</div>
+                </div>
+                <div class="card">
+                    <div class="card__sale"></div>
+                    <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
+                    <h4 class="card__name">Сумка</h4>
+                    <div class="card__price">
+                        <span class="card__price-old">1 990</span>
+                        1 000 ₽
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                    <h4 class="card__name">Зонт</h4>
+                    <div class="card__price">1 990 ₽</div>
                 </div>
             </section>
         </main>
-        <script src="js/index.js" type="module"></script>
+        <section class="order">
+            <div class="container">
+                <h2>Оформление заказа</h2>
+                <form action="/" method="POST">
+                    <h4>Контактное лицо</h4>
+                    <input type="text" class="order__input input-text" placeholder="ФИО" name="fio">
+                    <input type="email" class="order__input input-text" placeholder="Email" name="email">
+                    <h4>Контактное лицо</h4>
+                    <div>
+                        <label>
+                            <input type="radio" name="payment" value="online" >
+                            Online-оплата
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="payment" value="cash" >
+                            Наличные
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="payment" value="ondeman" >
+                            При получении
+                        </label>
+                    </div>
+                    <button class="order__button button">Оформить заказ</button>
+                </form>
+            </div>
+        </section>
+        <script src="js/grid.js"></script>
     </body>
 </html>
