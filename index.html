@@ -1,135 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>HTML и CSS</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/styles.less" >
-    </head>
-    <body>
-        <!-- Начнем отсюда -->
-        <header class="header">
-            <div class="container">
-                <div class="header__container">
-                    <a href="/">
-                        <img src="/assets/hh.svg" alt="">
-                    </a>
-                    <!-- Выбор меню отображения сделан через медио-выражение для классов  menu-desktop/menu-desktop-buttons/ menu-mobile-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML и CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.less">
+</head>
+<body>
+<!-- Начнем отсюда -->
+<header class="header">
+    <div class="container">
+        <div class="header__container">
+            <a href="/">
+                <img src="/assets/hh.svg" alt="">
+            </a>
+            <!-- Выбор меню отображения сделан через медио-выражение для классов  menu-desktop/menu-desktop-buttons/ menu-mobile-->
 
-                    <!-- Меню, которое отображаем на десктопе и планшете -->
-                    <nav class="menu-desktop">
-                        <a href="" class="menu-desktop-link">
-                            Одежда
-                        </a>
-                        <a href="" class="menu-desktop-link">
-                            Сумки
-                        </a>
-                        <a href="" class="menu-desktop-link">
-                            Аксессуары
-                        </a>
-                        <a href="" class="menu-desktop-link">
-                            Офисные принадлежности
-                        </a>
-                    </nav>
-                    <div class="menu-desktop-buttons">
-                        <button class="button-search"></button>
-                        <button class="button-sigin">Войти</button>
-                    </div>
-
-                    <!-- Меню, которое отображаем на мобильном устройстве -->
-                    <nav class="menu-mobile">
-                        <button class="header__button header__button_search">Поиск</button>
-                        <button class="header__button header__button_profile">Профиль</button>
-                        <button class="header__button header__button_menu">Меню</button>
-                    </nav>
-                 </div>
+            <!-- Меню, которое отображаем на десктопе и планшете -->
+            <nav class="menu-desktop">
+                <a href="" class="menu-desktop-link">
+                    Одежда
+                </a>
+                <a href="" class="menu-desktop-link">
+                    Сумки
+                </a>
+                <a href="" class="menu-desktop-link">
+                    Аксессуары
+                </a>
+                <a href="" class="menu-desktop-link">
+                    Офисные принадлежности
+                </a>
+            </nav>
+            <div class="menu-desktop-buttons">
+                <button class="button-search"></button>
+                <button class="button-sigin">Войти</button>
             </div>
-        </header>
 
-        <main class="container">
-            <h2 class="title title_h2">
-                Популярные товары
-            </h2>
-            <section class="catalog">
-                <div class="card">
-                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
-                    <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 ₽</div>
-                </div>
-                <div class="card">
-                    <div class="card__sale"></div>
-                    <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
-                    <h4 class="card__name">Сумка</h4>
-                    <div class="card__price">
-                        <span class="card__price-old">1 990</span>
-                        1 000 ₽
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
-                    <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 ₽</div>
-                </div>
-                <div class="card">
-                    <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
-                    <h4 class="card__name">Сумка</h4>
-                    <div class="card__price">1 990 ₽</div>
-                </div>
-                <div class="card">
-                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
-                    <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 ₽</div>
-                </div>
-                <div class="card">
-                    <div class="card__sale"></div>
-                    <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
-                    <h4 class="card__name">Сумка</h4>
-                    <div class="card__price">
-                        <span class="card__price-old">1 990</span>
-                        1 000 ₽
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
-                    <h4 class="card__name">Зонт</h4>
-                    <div class="card__price">1 990 ₽</div>
-                </div>
-            </section>
-        </main>
+            <!-- Меню, которое отображаем на мобильном устройстве -->
+            <nav class="menu-mobile">
+                <button class="header__button header__button_search">Поиск</button>
+                <button class="header__button header__button_profile">Профиль</button>
+                <button class="header__button header__button_menu">Меню</button>
+            </nav>
+        </div>
+    </div>
+</header>
 
-        <section class="order">
-            <div class="container">
-                <h2>Оформление заказа</h2>
-                <form action="/" method="POST">
-                    <h4>Контактное лицо</h4>
-                    <input type="text" class="order__input input-text" placeholder="ФИО" name="fio">
-                    <input type="email" class="order__input input-text" placeholder="Email" name="email">
-                    <h4>Контактное лицо</h4>
-                    <div>
-                        <label>
-                            <input type="radio" name="payment" value="online" >
-                            Online-оплата
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="radio" name="payment" value="cash" >
-                            Наличные
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="radio" name="payment" value="ondeman" >
-                            При получении
-                        </label>
-                    </div>
-                    <button class="order__button button">Оформить заказ</button>
-                </form>
+<main>
+    <div class="container">
+        <h2 class="title title_h2">
+            Популярные товары
+        </h2>
+        <section class="catalog">
+            <div class="card">
+                <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                <h4 class="card__name">Зонт</h4>
+                <div class="card__price">1 990 ₽</div>
+            </div>
+            <div class="card">
+                <div class="card__sale"></div>
+                <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
+                <h4 class="card__name">Сумка</h4>
+                <div class="card__price">
+                    <span class="card__price-old">1 990</span>
+                    1 000 ₽
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                <h4 class="card__name">Зонт</h4>
+                <div class="card__price">1 990 ₽</div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
+                <h4 class="card__name">Сумка</h4>
+                <div class="card__price">1 990 ₽</div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                <h4 class="card__name">Зонт</h4>
+                <div class="card__price">1 990 ₽</div>
+            </div>
+            <div class="card">
+                <div class="card__sale"></div>
+                <img class="card__img" src="./images/product-2.jpg" alt="Зонт">
+                <h4 class="card__name">Сумка</h4>
+                <div class="card__price">
+                    <span class="card__price-old">1 990</span>
+                    1 000 ₽
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./images/product-1.jpg" alt="Зонт">
+                <h4 class="card__name">Зонт</h4>
+                <div class="card__price">1 990 ₽</div>
             </div>
         </section>
-        <script src="js/grid.js"></script>
-    </body>
+    </div>
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages_items">
+                <div class="advantage">
+                    <img src="./assets/delivery.svg" alt="Доставка" class="advantage__img">
+                    <div class="advantage__describe">Быстрая доставка по всей России</div>
+                </div>
+                <div class="advantage">
+                    <img src="./assets/return.svg" alt="Возврат" class="advantage__img">
+                    <div class="advantage__describe">100% гарантия возврата и подлинность товара</div>
+                </div>
+                <div class="advantage">
+                    <img src="./assets/support.svg" alt="Поддержка" class="advantage__img">
+                    <div class="advantage__describe">Круглосуточная служба поддержки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer_buttons">
+            <div class="social_icons">
+                <a href="/" class="footer_social_icon__button footer_social_icon__button_facebook">
+                    <img src="/assets/facebook.svg" alt="Facebook">
+                </a>
+                <a href="/" class="footer_social_icon__button footer_social_icon__button_twitter">
+                    <img src="/assets/twitter.svg" alt="Twitter">
+                </a>
+                <a href="/" class="footer_social_icon__button footer_social_icon__button_vk">
+                    <img src="/assets/vk.svg" alt="VK">
+                </a>
+                <a href="/" class="footer_social_icon__button footer_social_icon__button_instagram">
+                    <img src="/assets/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+            <div class="market_icons">
+                <a href="/" class="footer__button footer__button_app_store">
+                    <img src="/assets/app_store.svg" alt="App Store">
+                </a>
+                <a href="/" class="footer__button footer__button_google_play">
+                    <img src="/assets/google_play.svg" alt="Google Play">
+                </a>
+            </div>
+            <div class="footer_icon_desktop">
+                <img src="/assets/hh_footer.svg" alt="Логотип HH" class="footer_icon">
+            </div>
+        </div>
+        <div class="right">© 2019 Группа компаний HeadHunter<br>
+            Сегодня на сайте 684 978 вакансий,
+            34 789 747 резюме, 858 923 компании
+            и за неделю 1 211 363 приглашения
+        </div>
+    </div>
+</footer>
+
+<section class="order">
+    <div class="container">
+        <h2>Оформление заказа</h2>
+        <form action="/" method="POST">
+            <h4>Контактное лицо</h4>
+            <input type="text" class="order__input input-text" placeholder="ФИО" name="fio">
+            <input type="email" class="order__input input-text" placeholder="Email" name="email">
+            <h4>Контактное лицо</h4>
+            <div>
+                <label>
+                    <input type="radio" name="payment" value="online">
+                    Online-оплата
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="payment" value="cash">
+                    Наличные
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="payment" value="ondeman">
+                    При получении
+                </label>
+            </div>
+            <button class="order__button button">Оформить заказ</button>
+        </form>
+    </div>
+</section>
+<script src="js/grid.js"></script>
+</body>
 </html>

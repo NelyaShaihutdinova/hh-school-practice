@@ -1,0 +1,39 @@
+.advantages {
+    background-color: #EEEEEE;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.advantage {
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 0 20px;
+    padding: 15px 0;
+    align-items: center;
+    &__img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+    &__describe {
+        position: relative;
+        line-height: 20px;
+        padding-right: 15px;
+    }
+}
+
+@media @gt-mobile {
+    .advantages_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 20px;
+    }
+    .advantage {
+        position: relative;
+        &__describe {
+            width: 170px;
+            position: relative;
+            line-height: 20px;
+        }
+    }
+}
