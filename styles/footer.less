@@ -91,15 +91,19 @@ each(@market_items, {
 
 @media @gt-tablet {
     .footer_buttons {
-        justify-content: flex-start;
-
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .footer_icon_desktop {
         display: block;
-        margin-left: 235px;
+        position: relative;
+        text-align: right;
     }
     .market_icons {
-        margin-left: 100px;
+        position: relative;
+    }
+    .social_icons {
+        position: relative;
     }
 }
 
