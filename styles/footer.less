@@ -31,22 +31,6 @@
     padding-bottom: 30px;
 }
 
-@social_items: facebook, twitter, vk, instagram;
-
-each(@social_items, {
-    .footer_social_icon__button_@{value} {
-        background: url('/assets/@{value}.svg');
-    }
-})
-
-@market_items: app_store, google_play;
-
-each(@market_items, {
-    .footer__button_@{value} {
-        background: url('/assets/@{value}.svg');
-    }
-})
-
 .footer__button:last-of-type {
     margin-right: 0;
 }
